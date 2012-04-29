@@ -1,4 +1,12 @@
 ﻿
+//	例外
+try{
+	var i = xx;
+}
+catch(e){
+	document.writeln("Exception: " + e.message);
+}
+
 //	2重ループをラベル構文で脱出
 label_y:
 for(var y = 0; y < 20; y++){
