@@ -1,5 +1,7 @@
+﻿
+//	undefinedな変数を出力
+var undef;
+document.writeln(undef);
 
-var x;
-document.writeln(x);
-
+//	文字列を出力
 document.writeln("HelloWorld!");
