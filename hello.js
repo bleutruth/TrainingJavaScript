@@ -4,13 +4,15 @@ var TestClass = function()
 {
 	var Member = function(str){
 		this.str = str;
-		this.GetStr = function(){ return this.str; }
 	}
+	Member.prototype.GetStr = function(){ return this.str; }
+
 	var mem0 = new Member('xxxxx');
 	mem0.str = 'yyy';
+	mem0.GetStr2 = function(){ return this.GetStr(); }
 	var mem1 = new Member('aaaa');
 	mem1.str = 'bbb';
-	document.writeln(mem0.GetStr() + ',' + mem1.GetStr());
+	document.writeln(mem0.GetStr2() + ',' + mem1.GetStr());
 }
 
 //	例外
