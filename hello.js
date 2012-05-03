@@ -13,6 +13,10 @@ var TestClass = function()
 	var mem1 = new Member('aaaa');
 	mem1.str = 'bbb';
 	document.writeln(mem0.GetStr2() + ',' + mem1.GetStr());
+
+	Member.StaticParam = 1234;
+	Member.StaticMethod = function(){ return Member.StaticParam; }
+	document.writeln(Member.StaticParam + ',' + Member.StaticMethod());
 }
 
 //	例外
