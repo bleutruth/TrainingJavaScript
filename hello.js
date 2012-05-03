@@ -5,7 +5,9 @@ var TestClass = function()
 	var Member = function(str){
 		this.str = str;
 	}
-	Member.prototype.GetStr = function(){ return this.str; }
+	Member.prototype = {
+		GetStr : function(){ return this.str; }
+	};
 
 	var mem0 = new Member('xxxxx');
 	mem0.str = 'yyy';
