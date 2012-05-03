@@ -1,4 +1,18 @@
 ﻿
+//	クラス
+var TestClass = function()
+{
+	var Member = function(str){
+		this.str = str;
+		this.GetStr = function(){ return this.str; }
+	}
+	var mem0 = new Member('xxxxx');
+	mem0.str = 'yyy';
+	var mem1 = new Member('aaaa');
+	mem1.str = 'bbb';
+	document.writeln(mem0.GetStr() + ',' + mem1.GetStr());
+}
+
 //	例外
 var TestException = function()
 {
@@ -41,6 +55,7 @@ var TestWrite = function()
 	document.writeln('HelloWorld!');
 }
 
+TestClass();
 TestException();
 TestLoop();
 TestWrite();
